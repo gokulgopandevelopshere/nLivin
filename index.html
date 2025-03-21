@@ -234,7 +234,7 @@
                     e.preventDefault();
                     
                     // Change this URL to your actual Google Apps Script web app URL
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwcTCE6NXU3gV2dPIVPDWgLc1V67fZADD0NXVERmL2X9ZM0Qif2oqIFcO_bRU5c05tKNA/exec';
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxxFlxu8fbfqSY7bfJawuvKhX08klkPrGwvGOm-_jJFrbC_0exjbWSfcvo97QkKeS-a/exec';
                     
                     // Get form elements
                     const form = this;
@@ -258,13 +258,14 @@
                     // Send data to Apps Script
                     fetch(scriptURL, {
                       method: 'POST',
-                      body: formData
+                      body: formData,
+                       mode: 'no-cors'
                     })
                     .then(response => {
-                      if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                      }
-                      return response.json();
+                      // if (!response.ok) {
+                      //   throw new Error('Network response was not ok');
+                      // }
+                      // return response.json();
                     })
                     .then(data => {
                       // Show success message
