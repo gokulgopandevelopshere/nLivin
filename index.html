@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nLiven Healthcare Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+        @keyframes float {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-8px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .support-card.animate-float {
+    animation: float 3s ease-in-out forwards;
+    opacity: 1;
+  }
+  
+  .support-card {
+    transition: opacity 0.8s ease-out;
+  }
+    </style>
+  </head>
+  <body class="bg-white">
+    <header class="sticky-header">
+      <div
+        class="w-full bg-primary h-8 text-white flex gap-5 text-sm items-center justify-center md:justify-start md:px-10 px-1 py-2 animate-slide-in-down"
+      >
+        <div class="flex gap-2 top-data">
+          <i class="ri-phone-fill"></i>
+          <p>ABN: 91661653167</p>
+        </div>
+        <div class="flex gap-2 top-data">
+          <i class="ri-mail-fill"></i>
+          <p>info@nlivenhealthcare.com.au</p>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 flex justify-between items-center bg-white animate-slide-in-down">
+        <div class="flex items-center slide-in-left md:px-0 py-4">
+          <a href="/">
+            <img src="./assets/logo.svg" alt="nLiven Logo" class="md:h-[5rem] h-8" />
+          </a>
+        </div>
+        
+        <!-- Hamburger Menu Button -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex absolute md:relative top-24 left-0 w-full bg-white md:w-auto md:top-0 md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none">
+          <a href="#home" class="block md:inline px-4 py-2 text-gray-700 hover:text-primary font-semibold transition-colors">Home</a>
+          <a href="#contact" class="block md:inline px-4 py-2 text-gray-700 hover:text-primary font-semibold transition-colors">Contact</a>
+          <a href="#services" class="block md:inline px-4 py-2 text-gray-700 hover:text-primary font-semibold transition-colors">Services</a>
+          <a href="#about" class="block md:inline px-4 py-2 text-gray-700 hover:text-primary font-semibold transition-colors">About</a>
+        </nav>
+        
+        <div class="flex items-center slide-in-right md:flex hidden ">
+          <img src="./assets/ndis.png" alt="nLiven Logo" class="md:h-[8rem] h-16" />
+        </div>
+      </div>
+      
+      <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      </script>
+    </header>
+    <main>
+      <section
+        id="hero"
+        class="relative md:h-[60rem] h-[50rem] flex-center overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#E8F5E9]/80 via-[#E8F5E9]/50 to-transparent z-10"
+        ></div>
+        <img
+          src="./assets/pexels-ron-lach-9654034.jpg"
+          alt="Healthcare Hero"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="container mx-auto px-4 relative z-20">
+          <div class="max-w-2xl md:p-10 p-4 md:pt-32 pt-28">
+            <div class="slide-in-left md:mt-16 mt-24">
+              <h1
+                class="md:text-6xl text-3xl font-bold gradient-text mb-6 leading-tight"
+              >
+                Empowering Lives Through Compassionate Care
+              </h1>
+            </div>
+            <div class="slide-in-right">
+              <h4 class="md:text-2xl text-xl pb-3">Nliven Health Care Pvt Ltd-<strong>Sunshine Coast </strong></h4>
+              <p class="text-md text-gray-700 mb-8">
+                Nliven Health Care is highly reliable and trustworthy NDIS
+                Service Provider run by highly experienced RNs in <strong> Sunshine
+                Coast</strong>, providing excellent support solutions to participants who
+                are in need. <br>
+                <div class="md:flex hidden pb-10">
+
+                We provide supported housing, transition
+                accommodation, complex care services and outreach support. We
+                have a variety of services and levels of care, each unique and
+                individual, just like the needs of our participants.<br>
+                Your
+                program is developed by experts clinicians in Nliven Health Care
+                through a wealth of knowledge and experience and delivered
+                through qualified support workers and other staff. <br>
+                We are
+                committed to meeting all of your health needs and go above and
+                beyond to ensure you get the best care available.
+              </div>
+
+              </p>
+            </div>
+            <div class="flex space-x-4 scale-in">
+              <button
+                class="border-2 border-primary text-primary md:px-8 px-2 md:text-xl text-xs rounded-button hover:bg-primary hover:text-white transition-all card-hover-effect"
+              >
+                Contact Us
+              </button>
+              <a
+                href="/brochure.pdf"
+                download
+                class="flex items-center bg-white text-primary md:px-8 px-2 py-3 md:text-xl text-xs rounded-button hover:bg-primary hover:text-white transition-all card-hover-effect border-2 border-primary"
+              >
+                <i class="ri-download-line mr-2"></i>
+                Download Brochure
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                Reach out to us
+              </h2>
+              <p class="text-xl text-gray-600">
+                We're here to help. Contact us for more information about our
+                services.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+              <div>
+                <form id="contactForm" class="space-y-6">
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      placeholder="Your email"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="mobile">Mobile</label>
+                    <input
+                      type="tel"
+                      id="mobile"
+                      name="mobile"
+                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      placeholder="Your Mobile"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                      placeholder="Your message"
+                      required
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    id="submitButton"
+                    class="w-full bg-primary text-white px-6 py-3 rounded-button hover:bg-opacity-90 transition-all"
+                  >
+                    Send Message
+                  </button>
+                  <div id="formStatus" class="text-center hidden">
+                    <p id="successMessage" class="text-green-600 font-medium hidden">Your message has been sent successfully!</p>
+                    <p id="errorMessage" class="text-red-600 font-medium hidden">There was an error sending your message. Please try again.</p>
+                  </div>
+                </form>
+                
+                <script>
+                  document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Change this URL to your actual Google Apps Script web app URL
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwcTCE6NXU3gV2dPIVPDWgLc1V67fZADD0NXVERmL2X9ZM0Qif2oqIFcO_bRU5c05tKNA/exec';
+                    
+                    // Get form elements
+                    const form = this;
+                    const submitButton = document.getElementById('submitButton');
+                    const formStatus = document.getElementById('formStatus');
+                    const successMessage = document.getElementById('successMessage');
+                    const errorMessage = document.getElementById('errorMessage');
+                    
+                    // Disable button during submission
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = 'Sending...';
+                    
+                    // Hide any previous status messages
+                    formStatus.classList.add('hidden');
+                    successMessage.classList.add('hidden');
+                    errorMessage.classList.add('hidden');
+                    
+                    // Collect form data
+                    const formData = new FormData(form);
+                    
+                    // Send data to Apps Script
+                    fetch(scriptURL, {
+                      method: 'POST',
+                      body: formData
+                    })
+                    .then(response => {
+                      if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                    })
+                    .then(data => {
+                      // Show success message
+                      formStatus.classList.remove('hidden');
+                      successMessage.classList.remove('hidden');
+                      
+                      // Reset form
+                      form.reset();
+                    })
+                    .catch(error => {
+                      // Show error message
+                      formStatus.classList.remove('hidden');
+                      errorMessage.classList.remove('hidden');
+                      console.error('Error:', error);
+                    })
+                    .finally(() => {
+                      // Re-enable button
+                      submitButton.disabled = false;
+                      submitButton.innerHTML = 'Send Message';
+                      
+                      // Optional: Hide status message after 5 seconds
+                      setTimeout(() => {
+                        formStatus.classList.add('hidden');
+                      }, 5000);
+                    });
+                  });
+                </script>
+              </div>
+              <div class="space-y-8">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-4">
+                    Contact Information
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-phone-line text-primary"></i>
+                      </div>
+                      <div>
+                        <p class="text-gray-600">0432062401</p>
+                        <p class="text-gray-600">0497623343</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-mail-line text-primary"></i>
+                      </div>
+                      <p class="text-gray-600">info@nlivenhealthcare.com.au</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-global-line text-primary"></i>
+                      </div>
+                      <p class="text-gray-600">www.nlivenhealthcare.com.au</p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-4">
+                    NDIS Registered Provider
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    We are a registered NDIS provider committed to delivering
+                    high-quality care services.
+                  </p>
+                  <img src="./assets/ndis.png" alt="NDIS Badge" class="w-24" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-20">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Nliven Health Care Pvt Ltd - Sunshine Coast 
+              </h2>
+              <p class="text-gray-600 mb-6">
+                Approved provider for NDIS in-home and community supports for
+                adults.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Nliven Health Care is a highly reliable and trustworthy NDIS
+                Service Provider run by experienced RNs in the Sunshine Coast
+                region, offering excellent support solutions to participants in
+                need.
+              </p>
+              <p class="text-gray-600 mb-6">
+                We provide supported housing, transition accommodation, complex
+                care services, and outreach support. Each service is unique and
+                tailored to the individual needs of our participants.
+              </p>
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center">
+              <img
+                src="./assets/pexels-juanpphotoandvideo-1250452.jpg"
+                alt="Nliven Health Care Support"
+                class="rounded-lg shadow-xl h-[30rem] aspect-square object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-20">
+          <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                What is NDIS?
+              </h2>
+              <p class="text-gray-600 mb-6">
+                The National Disability Insurance Scheme (NDIS) is Australia's
+                national scheme for people with disability. It provides funding
+                directly to individuals to support their specific needs and
+                goals.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-center text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                  Personalized support plans
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                  Choice and control over services
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                  Early intervention support
+                </li>
+                <li class="flex items-center text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                  Community participation
+                </li>
+              </ul>
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center">
+              <img
+                src="./assets/what.jpg"
+                alt="Nliven Health Care Support"
+                class="rounded-lg shadow-xl h-[30rem] aspect-square object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- --------- -->
+      <section id="Our Team" class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-32 -translate-y-40 blob-shape"></div>
+        <div class="absolute bottom-90 right-0 w-64 h-64 bg-secondary/5 rounded-full translate-x-32 translate-y-40 blob-shape"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Our Team
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Meet the experienced RNs behind Nliven Health Care, dedicated to providing excellent support solutions.
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-8 px-8 team-wrapper">
+                <div class="team-image-container rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="https://www.anshikamedia.com/wp-content/uploads/2023/12/our-team.png" alt="Our Team" class="w-full h-auto object-cover team-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-50 transition-opacity duration-300 team-image-overlay">
+                        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">
+                            Nliven Health Care
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="team-text-container bg-white p-8 rounded-lg shadow-lg flex-1">
+                    <div class="text-gray-700">
+                        <p class="mb-4">
+                           <h1 class="text-2xl font-bold">Nliven Health Care Pvt Ltd - Sunshine Coast </h1> is an approved provider for NDIS in-home and community supports for adults. We are a highly reliable and trustworthy NDIS Service Provider run by experienced RNs in the Sunshine Coast region, offering excellent support solutions to participants in need.
+                        </p>
+                        <p class="mb-4">
+                            We provide supported housing, transition accommodation, complex care services, and outreach support. Each service is unique and tailored to the individual needs of our participants.
+                        </p>
+                        <p class="font-semibold text-gray-900">
+                            Our team is committed to providing compassionate, personalized care that empowers individuals and enriches their lives. We believe in building strong relationships with our participants and their families, fostering a supportive and inclusive environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- -------------- -->
+
+
+
+
+      
+      <section
+        id="services"
+        class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-32 -translate-y-32 blob-shape"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/5 rounded-full translate-x-32 translate-y-32 blob-shape"
+        ></div>
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Our Core Services
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive healthcare solutions tailored to meet your
+              individual needs
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="service-card bg-white p-8 rounded-lg shadow-lg">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-home-heart-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Supported Independent Living
+              </h3>
+              <p class="text-gray-600">
+                Enabling individuals to live independently while receiving the
+                support they need.
+              </p>
+            </div>
+            <div class="service-card bg-white p-8 rounded-lg shadow-lg">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-nurse-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Assisted Daily Living
+              </h3>
+              <p class="text-gray-600">
+                Professional assistance with daily activities and personal care
+                needs.
+              </p>
+            </div>
+            <div class="service-card bg-white p-8 rounded-lg shadow-lg">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-heart-pulse-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                High Complex Care Nursing
+              </h3>
+              <p class="text-gray-600">
+                Specialized nursing care for complex medical conditions and
+                requirements.
+              </p>
+            </div>
+            <div class="service-card bg-white p-8 rounded-lg shadow-lg">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-group-line text-2xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Social and Community Participation
+              </h3>
+              <p class="text-gray-600">
+                Supporting active engagement in community activities and social
+                connections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="philosophy" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+            Our Philosophy
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="p-8 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors"
+            >
+              <div class="w-16 h-16 flex items-center justify-center mb-6">
+                <i class="ri-heart-pulse-line text-primary text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Integrated Care</h3>
+              <p class="text-gray-600">
+                We believe in a holistic approach that combines health and
+                social care services to create comprehensive support systems.
+              </p>
+            </div>
+            <div
+              class="p-8 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors"
+            >
+              <div class="w-16 h-16 flex items-center justify-center mb-6">
+                <i class="ri-team-line text-primary text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Person-Centered</h3>
+              <p class="text-gray-600">
+                Every individual deserves personalized care that respects their
+                unique needs, preferences, and aspirations.
+              </p>
+            </div>
+            <div
+              class="p-8 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors"
+            >
+              <div class="w-16 h-16 flex items-center justify-center mb-6">
+                <i class="ri-shield-star-line text-primary text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Quality Focus</h3>
+              <p class="text-gray-600">
+                We maintain the highest standards of care while ensuring safety
+                and accessibility for all our participants.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mission" class="py-20 bg-primary/5">
+        <div class="container mx-auto px-6">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Our Mission</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-12">
+              Nliven Health Care's mission is to empower individuals with
+              disabilities to discover, develop, and demonstrate their full
+              potential. Through encouragement, guidance, and capacity building,
+              we foster independence and create an inclusive, supportive
+              environment where everyone can thrive.
+            </p>
+            <div class="flex md:flex-row flex-col justify-center gap-6">
+              <div class="flex items-center gap-2 text-primary">
+                <i class="ri-check-line text-xl"></i>
+                <span>Professional Care</span>
+              </div>
+              <div class="flex items-center gap-2 text-primary">
+                <i class="ri-check-line text-xl"></i>
+                <span>Individual Focus</span>
+              </div>
+              <div class="flex items-center gap-2 text-primary">
+                <i class="ri-check-line text-xl"></i>
+                <span>Community Integration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="services-section" class="max-w-[1200px] mx-auto my-10 text-center p-5 relative overflow-hidden opacity-0 translate-y-[50px] transition-all duration-1000">
+        <!-- Bubbles for background animation -->
+        <div class="bubble absolute w-[100px] h-[100px] top-[10%] left-[5%] bg-primary/5 rounded-full z-[-1] opacity-0 transition-opacity duration-1000"></div>
+        <div class="bubble absolute w-[150px] h-[150px] top-[70%] right-[10%] bg-primary/5 rounded-full z-[-1] opacity-0 transition-opacity duration-1000"></div>
+        <div class="bubble absolute w-[150px] h-[150px] top-[50%] right-[50%] bg-primary/5 rounded-full z-[-1] opacity-0 transition-opacity duration-1000"></div>
+        <div class="bubble absolute w-[80px] h-[80px] top-[30%] left-[20%] bg-primary/5 rounded-full z-[-1] opacity-0 transition-opacity duration-1000"></div>
+        <div class="bubble absolute w-[100px] h-[100px] top-[10%] right-[25%] bg-primary/5 rounded-full z-[-1] opacity-0 transition-opacity duration-1000"></div>
+
+        <h2 id="section-title" class="mb-10 text-4xl md:text-4xl text-primary font-bold opacity-0 translate-y-5">
+            Our<span class="text-secondary"> Values</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <div class="service-item flex flex-col items-center opacity-0 scale-[0.7] transition-all duration-600 ease-in-out">
+                <div class="w-[90px] h-[90px] md:w-[70px] md:h-[70px] bg-white rounded-[10px] shadow-md flex items-center justify-center mb-6 transition-all duration-300">
+                    <i class="ri-hand-heart-line text-primary text-3xl"></i>
+                </div>
+                <h3 class="font-bold text-xl md:text-xl text-primary mb-3 transition-colors duration-300">Trust</h3>
+                <p class="text-xl md:text-xl leading-relaxed text-light-primary text-center transition-colors duration-300">Building strong relationships through honesty and transparency.</p>
+            </div>
+            
+            <div class="service-item flex flex-col items-center opacity-0 scale-[0.7] transition-all duration-600 ease-in-out">
+                <div class="w-[90px] h-[90px] md:w-[70px] md:h-[70px] bg-white rounded-[10px] shadow-md flex items-center justify-center mb-6 transition-all duration-300">
+                    <i class="ri-shield-check-line text-primary text-3xl"></i>
+
+                </div>
+                <h3 class="font-bold text-xl md:text-xl text-primary mb-3 transition-colors duration-300">Quality</h3>
+                <p class="text-xl md:text-xl leading-relaxed text-light-primary text-center transition-colors duration-300">Maintaining excellence in all services while minimizing risks.</p>
+            </div>
+            
+            <div class="service-item flex flex-col items-center opacity-0 scale-[0.7] transition-all duration-600 ease-in-out">
+                <div class="w-[90px] h-[90px] md:w-[70px] md:h-[70px] bg-white rounded-[10px] shadow-md flex items-center justify-center mb-6 transition-all duration-300">
+                    <i class="ri-user-voice-line text-primary text-3xl"></i>
+
+                </div>
+                <h3 class="font-bold text-xl md:text-xl text-primary mb-3 transition-colors duration-300">Choice</h3>
+                <p class="text-xl md:text-xl leading-relaxed text-light-primary text-center transition-colors duration-300">Empowering individuals with control over their care journey.
+                </p>
+            </div>
+
+            <div class="service-item flex flex-col items-center opacity-0 scale-[0.7] transition-all duration-600 ease-in-out">
+                <div class="w-[90px] h-[90px] md:w-[70px] md:h-[70px] bg-white rounded-[10px] shadow-md flex items-center justify-center mb-6 transition-all duration-300">
+                    <svg class="w-[45px] h-[45px] md:w-[35px] md:h-[35px] fill-primary transition-transform duration-300" viewBox="0 0 24 24">
+                        <path d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"/>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-xl md:text-xl text-primary mb-3 transition-colors duration-300">Inclusion</h3>
+                <p class="text-xl md:text-xl leading-relaxed text-light-primary text-center transition-colors duration-300">Creating an environment where everyone belongs and thrives.</p>
+            </div>
+        </div>
+    </div>
+      
+
+
+
+
+      <!-- Healthcare Services Section -->
+<section id="healthcare-services" class="py-20">
+  <div class="container mx-auto md:px-20 px-5">
+    <div class="text-center mb-16">
+      <h2 class="md:text-4xl text-3xl font-bold text-gray-900 mb-4">
+        Comprehensive Healthcare Services
+      </h2>
+      <p class="md:text-xl text-md text-gray-600 max-w-2xl mx-auto">
+        Personalized care solutions delivered by experienced healthcare professionals
+      </p>
+    </div>
+
+    <!-- Supported Independent Living -->
+    <div class="py-20 bg-gray-50">
+      <div class="container mx-auto px-5 md:px-10">
+        
+        
+        
+        
+        <!-- SIL Section - Staggered Cards with Center Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+          <!-- Left Column Cards -->
+          <div class="space-y-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div class="bg-[#2c6e5a] h-2 w-full"></div>
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-3">
+                    <i class="ri-home-4-line text-lg text-[#3ab795]"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Household Management</h4>
+                </div>
+                <p class="text-gray-600">
+                  Complete assistance with cleaning, cooking, shopping, and other household tasks.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div class="bg-[#2c6e5a] h-2 w-full"></div>
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-3">
+                    <i class="ri-user-heart-line text-lg text-[#3ab795]"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Personal Care Support</h4>
+                </div>
+                <p class="text-gray-600">
+                  Assistance with showering, meal preparation, medication management, and personal needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Center Image Column -->
+          <div class="relative">
+            <div class="sticky top-20">
+              <div class="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                <img src="./assets/ryan-fields-Xz7MMD5tZwA-unsplash.jpg" alt="Supported Living" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1e4a3f] to-transparent opacity-70"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <h3 class="text-2xl font-bold mb-3">Supported Independent Living</h3>
+                  <p class="text-white/90 mb-4">
+                    Our comprehensive package fosters autonomy alongside essential support.
+                  </p>
+                  <!-- <div class="flex items-center">
+                    <div class="w-8 h-8 bg-[#3ab795] rounded-full flex items-center justify-center mr-3">
+                      <i class="ri-arrow-right-line text-white"></i>
+                    </div>
+                    <span class="font-medium">Learn More</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column Cards -->
+          <div class="space-y-8">
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div class="bg-[#2c6e5a] h-2 w-full"></div>
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-3">
+                    <i class="ri-calendar-check-line text-lg text-[#3ab795]"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Goal Achievement</h4>
+                </div>
+                <p class="text-gray-600">
+                  Support in planning activities to facilitate personal goals and increase independence.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div class="bg-[#2c6e5a] h-2 w-full"></div>
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-3">
+                    <i class="ri-shield-check-line text-lg text-[#3ab795]"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">24/7 Support</h4>
+                </div>
+                <p class="text-gray-600">
+                  Round-the-clock assistance available whenever you need it, providing peace of mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Divider -->
+        <div class="flex items-center justify-center mb-20">
+          <div class="h-px bg-gray-200 w-1/3"></div>
+          <div class="px-4">
+            <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
+              <i class="ri-home-heart-line text-white text-xl"></i>
+            </div>
+          </div>
+          <div class="h-px bg-gray-200 w-1/3"></div>
+        </div>
+        
+        <!-- Respite Accommodation - Offset Image & Content -->
+        <div class="relative">
+          <!-- Background Shape -->
+          <div class="absolute top-0 right-0 w-1/2 h-full bg-[#1e4a3f]/5 rounded-l-3xl -z-10"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Main Content - 7 columns -->
+            <div class="lg:col-span-7 lg:pr-12">
+              <h3 class="text-2xl font-bold text-[#1e4a3f] mb-6">Respite Accommodation (STL)</h3>
+              <p class="text-gray-600 mb-8">
+                We provide 24/7 respite care services of the highest quality, ensuring that participants 
+                receive the assistance and downtime they need to rejuvenate.
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-[#3ab795]">
+                  <div class="flex items-center mb-3">
+                    <i class="ri-time-line text-xl text-[#3ab795] mr-3"></i>
+                    <h4 class="font-bold text-gray-900">Short & Long Term</h4>
+                  </div>
+                  <p class="text-gray-600 text-sm">
+                    Flexible respite options from short breaks to extended care periods.
+                  </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-[#3ab795]">
+                  <div class="flex items-center mb-3">
+                    <i class="ri-home-heart-line text-xl text-[#3ab795] mr-3"></i>
+                    <h4 class="font-bold text-gray-900">Multiple Settings</h4>
+                  </div>
+                  <p class="text-gray-600 text-sm">
+                    Choose between residential facilities or in-home respite care services.
+                  </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-[#3ab795]">
+                  <div class="flex items-center mb-3">
+                    <i class="ri-alert-line text-xl text-[#3ab795] mr-3"></i>
+                    <h4 class="font-bold text-gray-900">Emergency Care</h4>
+                  </div>
+                  <p class="text-gray-600 text-sm">
+                    Emergency respite services available when you need them most.
+                  </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-[#3ab795]">
+                  <div class="flex items-center mb-3">
+                    <i class="ri-community-line text-xl text-[#3ab795] mr-3"></i>
+                    <h4 class="font-bold text-gray-900">Centre-Based</h4>
+                  </div>
+                  <p class="text-gray-600 text-sm">
+                    Specialized center facilities designed for comfort and engagement.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image - 5 columns -->
+            <div class="lg:col-span-5">
+              <div class="relative">
+                <!-- Decorative elements -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#3ab795]/10 rounded-full -z-10"></div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#1e4a3f]/10 rounded-full -z-10"></div>
+                
+                <!-- Main image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                  <img src="./assets/diana-polekhina-ICVr6RnYpGg-unsplash.jpg" alt="Respite Care" class="w-full h-full object-cover" />
+                </div>
+                
+                <!-- Stats overlay -->
+                <div class="absolute -bottom-8 -left-8 bg-white rounded-lg shadow-xl p-4 flex items-center opacity-0 support-card">
+                  <div class="w-12 h-12 bg-[#1e4a3f] rounded-full flex items-center justify-center mr-4 transition-all duration-500 hover:bg-[#3ab795] group">
+                    <i class="ri-user-heart-line text-xl text-white transition-transform duration-300 group-hover:scale-110"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-600">Available</p>
+                    <p class="text-xl font-bold text-[#1e4a3f]">24/7 Support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- High Complex Care Nursing -->
+    <div class="mt-16 mb-16">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">High Complex Care & Community Nursing</h3>
+      <p class="text-gray-600 mb-6 text-center max-w-3xl mx-auto">
+        High-quality, personalized, and affordable nursing services delivered in the comfort of your home 
+        to promote wellness and support a healthier lifestyle.
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-syringe-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Catheter Care & Assessment</h4>
+          <p class="text-gray-600">
+            Professional catheter management and regular assessments for optimal care.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-medicine-bottle-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Stoma Care</h4>
+          <p class="text-gray-600">
+            Specialized stoma care and maintenance for improved quality of life.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-capsule-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Medication Administration</h4>
+          <p class="text-gray-600">
+            Safe and accurate medication management and administration.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-test-tube-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Injections</h4>
+          <p class="text-gray-600">
+            Professional administration of subcutaneous and intramuscular injections.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-heart-2-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Diabetic Care</h4>
+          <p class="text-gray-600">
+            Comprehensive diabetes management and monitoring services.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-mental-health-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Tracheostomy Management</h4>
+          <p class="text-gray-600">
+            Specialized tracheostomy care, cleaning, and maintenance.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-service-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Enteral Feeding</h4>
+          <p class="text-gray-600">
+            Management of enteral feeding systems and nutritional support.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-health-book-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Complex Care</h4>
+          <p class="text-gray-600">
+            Specialized care for severe dysphagia and complex bowel management.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <i class="ri-file-list-3-line text-xl text-primary"></i>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2">Continence Assessment</h4>
+          <p class="text-gray-600">
+            Professional assessment and management of continence issues.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social and Community Participation -->
+    <div class="py-20 mb-16 bg-gray-50">
+      <div class="container mx-auto px-5 md:px-10">
+        <div class="flex flex-col lg:flex-row gap-10 items-center">
+          <!-- Left Side - Content -->
+          <div class="lg:w-2/3">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Social & Community Participation</h3>
+            <p class="text-gray-600 mb-8">
+              Activities designed to help you explore new experiences, engage with your community, 
+              and develop meaningful connections at your own pace.
+            </p>
+            
+            <!-- Alternative Card Display - Timeline Style -->
+            <div class="space-y-6">
+              <!-- Item 1 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-graduation-cap-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Personal Development</h4>
+                  <p class="text-gray-600">
+                    Attend personal development courses and build new skills in a supportive environment tailored to your interests and goals.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-group-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Social Groups</h4>
+                  <p class="text-gray-600">
+                    Join social groups and build meaningful relationships in the community through regular meetups and shared activities.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-car-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Outings & Holidays</h4>
+                  <p class="text-gray-600">
+                    Enjoy outings, holiday camps, and supported travel experiences with personalized assistance as needed.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Item 4 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-community-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Community Access</h4>
+                  <p class="text-gray-600">
+                    Visit local libraries, beaches, parks, and community facilities with companionship and transportation support.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Item 5 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-movie-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Entertainment</h4>
+                  <p class="text-gray-600">
+                    Watch movies, attend concerts, and enjoy entertainment events with accompaniment and assistance.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Item 6 -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                  <i class="ri-basketball-line text-xl text-[#3ab795]"></i>
+                </div>
+                <div class="border-l-2 border-[#1e4a3f]/20 pl-6 py-1">
+                  <h4 class="text-lg font-bold text-gray-900 mb-2">Sporting Activities</h4>
+                  <p class="text-gray-600">
+                    Join sporting clubs and participate in recreational activities suited to your abilities and interests.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Side - Image -->
+          <div class="lg:w-1/3">
+            <div class="sticky top-20">
+              <div class="overflow-hidden rounded-2xl shadow-xl relative">
+                <!-- Main Image -->
+                <div class="relative h-96 w-full overflow-hidden">
+                  <img src="./assets/aditya-romansa-5zp0jym2w9M-unsplash.jpg" alt="Social & Community Participation" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" />
+                  <!-- Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#1e4a3f]/90 to-transparent"></div>
+                </div>
+                
+                <!-- Content overlay -->
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                  <h3 class="text-2xl font-bold mb-2">Community Engagement</h3>
+                  <div class="w-16 h-1 bg-[#3ab795] rounded-full mb-4"></div>
+                  <p class="text-white/90">
+                    Building connections and exploring new experiences tailored to your interests and comfort level.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <!-- Assisted Daily Living -->
+    <div class="py-20 bg-gray-50">
+      <div class="container mx-auto px-5 md:px-10">
+        <div class="flex flex-col lg:flex-row gap-10 items-center">
+          <!-- Left Side - Image and Heading -->
+          <div class="lg:w-1/3">
+            <div class="sticky top-20">
+              <div class="overflow-hidden rounded-2xl shadow-xl mb-6 relative">
+                <!-- Main Image -->
+                <div class="relative h-80 w-full overflow-hidden">
+                  <img src="./assets/markus-spiske-97Rpu-UmCaY-unsplash.jpg" alt="Assisted Daily Living" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" />
+                  <!-- Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#1e4a3f]/90 to-transparent"></div>
+                </div>
+                
+                <!-- Content overlay -->
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                  <h3 class="text-2xl font-bold mb-2">Assisted Daily Living</h3>
+                  <div class="w-16 h-1 bg-white rounded-full mb-4"></div>
+                  <p class="text-white/90">
+                    Dedicated household services tailored to meet individual needs, helping you 
+                    live as independently as possible at home and in the community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Side - Cards -->
+          <div class="lg:w-2/3">
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Card 1 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-sun-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Morning Routine</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Help with getting ready for the day including showering and dressing.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-restaurant-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Meals & Nutrition</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Assistance with eating, drinking, and meal preparation or delivery.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-droplet-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Personal Hygiene</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Maintaining hygiene including bathing and nail care.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-bus-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Transport & Mobility</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Support to get out and about including driving or public transport assistance.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-home-gear-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Household Maintenance</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Assistance with cleaning, linen service, and basic yard work.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Card 6 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center p-4 border-b border-gray-100">
+                  <div class="w-12 h-12 bg-[#3ab795]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#3ab795] transition-colors duration-300">
+                    <i class="ri-calendar-event-line text-xl text-[#3ab795] group-hover:text-white transition-colors duration-300"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900">Appointment Support</h4>
+                </div>
+                <div class="p-4">
+                  <p class="text-gray-600">
+                    Assistance getting to medical and personal appointments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+    </main>
+    <footer class="bg-gray-900 text-white md:py-12 py-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <img src="./assets/logo.svg" alt="nLiven Logo" class="mb-6 h-20" />
+            <p class="text-gray-400">
+              Providing professional healthcare services with compassion and
+              dedication.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Supported Independent Living</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Assisted Daily Living</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Complex Care Nursing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Community Participation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Stay updated with our latest news and updates.
+            </p>
+            <form class="space-y-4">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full px-4 py-2 rounded-button bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+              />
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 transition-all"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t border-[#008d57] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-center md:text-left flex gap-3 items-center">
+            © 2024 nLiven Healthcare. All rights reserved.
+            <a
+            href="#"
+            class="w-10 h-10 bg-[#008d57] rounded-full flex items-center justify-center hover:bg-[#006d43] transition-colors"
+          >
+            <i class="ri-facebook-fill text-white"></i>
+          </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition-all opacity-0 invisible"
+    >
+      <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e4a3f',
+                        'secondary': '#3ab795',
+                        'light-primary': '#2c6e5a',
+                    },
+                    keyframes: {
+                        popIn: {
+                            'to': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        float: {
+                            '0%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-100px)' },
+                        },
+                        fadeInDown: {
+                            'from': { opacity: '0', transform: 'translateY(20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'pop-in': 'popIn 0.6s forwards',
+                        'float': 'float 5s normal',
+                        'fade-in-down': 'fadeInDown 1s forwards 0.5s',
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.getElementById('services-section');
+            const title = document.getElementById('section-title');
+            const serviceItems = document.querySelectorAll('.service-item');
+            const bubbles = document.querySelectorAll('.bubble');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate section
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+
+                        // Animate title
+                        title.classList.add('animate-fade-in-down');
+
+                        // Animate service items
+                        serviceItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animate-pop-in');
+                            }, 600 + (index * 300));
+                        });
+
+                        // Animate bubbles
+                        bubbles.forEach(bubble => {
+                            bubble.classList.add('opacity-100', 'animate-float');
+                        });
+
+                        // Disconnect observer after animating
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+
+            observer.observe(section);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Select the support card element
+    const supportCard = document.querySelector('.support-card');
+    
+    // Select the parent section (Respite Accommodation section)
+    const respiteSection = supportCard.closest('.relative');
+    
+    // Create intersection observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // When the section comes into view
+        if (entry.isIntersecting) {
+          // Add the animation class after a small delay
+          setTimeout(() => {
+            supportCard.classList.add('animate-float');
+          }, 300);
+          
+          // Stop observing after animation is triggered
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+    
+    // Start observing the section
+    observer.observe(respiteSection);
+  });
+    </script>
+  </body>
+</html>
