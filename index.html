@@ -80,7 +80,7 @@
         </nav>
         
         <div class="flex items-center slide-in-right md:flex hidden ">
-          <img src="./assets/ndis.png" alt="nLiven Logo" class="md:h-[8rem] h-16" />
+          <img src="./assets/ndis logo 2.png" alt="nLiven Logo" class="md:h-[12rem] h-16" />
         </div>
       </div>
       
@@ -95,7 +95,7 @@
     </header>
     <main>
       <section
-        id="hero"
+        id="home"
         class="relative md:h-[60rem] h-[50rem] flex-center overflow-hidden"
       >
         <div
@@ -112,12 +112,12 @@
               <h1
                 class="md:text-6xl text-3xl font-bold   mb-6 leading-tight "style="color: #86c550;"
               >
-                Empowering Lives Through Compassionate Care
+                Enhancing Lives Through Compassionate Care
               </h1>
         
             </div>
             <div class="slide-in-right">
-              <h4 class="md:text-2xl text-xl pb-3">Nliven Health Care Pvt Ltd-<strong>Sunshine Coast </strong></h4>
+              <h4 class="md:text-2xl text-xl pb-3">Nliven Health Care Services-<strong>Sunshine Coast </strong></h4>
               <p class="text-md text-gray-700 mb-8">
                 Nliven Health Care is highly reliable and trustworthy NDIS
                 Service Provider run by highly experienced RNs in <strong> Sunshine
@@ -158,200 +158,13 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-              <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                Reach out to us
-              </h2>
-              <p class="text-xl text-gray-600">
-                We're here to help. Contact us for more information about our
-                services.
-              </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-              <div>
-                <form id="contactForm" class="space-y-6">
-                  <div>
-                    <label class="block text-gray-700 mb-2" for="name">Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="Your name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 mb-2" for="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="Your email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 mb-2" for="mobile">Mobile</label>
-                    <input
-                      type="tel"
-                      id="mobile"
-                      name="mobile"
-                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="Your Mobile"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-gray-700 mb-2" for="message">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="4"
-                      class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="Your message"
-                      required
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    id="submitButton"
-                    class="w-full bg-primary text-white px-6 py-3 rounded-button hover:bg-opacity-90 transition-all"
-                  >
-                    Send Message
-                  </button>
-                  <div id="formStatus" class="text-center hidden">
-                    <p id="successMessage" class="text-green-600 font-medium hidden">Your message has been sent successfully!</p>
-                    <p id="errorMessage" class="text-red-600 font-medium hidden">There was an error sending your message. Please try again.</p>
-                  </div>
-                </form>
-                
-                <script>
-                  document.getElementById('contactForm').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Change this URL to your actual Google Apps Script web app URL
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzl589WrRrtVgCM2ayQCzuGmnTp0ikOMv3sSpnC7E41WZRTggq56NRCQjfk04lXPfBO/exec';
-                    
-                    // Get form elements
-                    const form = this;
-                    const submitButton = document.getElementById('submitButton');
-                    const formStatus = document.getElementById('formStatus');
-                    const successMessage = document.getElementById('successMessage');
-                    const errorMessage = document.getElementById('errorMessage');
-                    
-                    // Disable button during submission
-                    submitButton.disabled = true;
-                    submitButton.innerHTML = 'Sending...';
-                    
-                    // Hide any previous status messages
-                    formStatus.classList.add('hidden');
-                    successMessage.classList.add('hidden');
-                    errorMessage.classList.add('hidden');
-                    
-                    // Collect form data
-                    const formData = new FormData(form);
-                    
-                    // Send data to Apps Script
-                    fetch(scriptURL, {
-                      method: 'POST',
-                      body: formData,
-                       mode: 'no-cors'
-                    })
-                    .then(response => {
-                      // if (!response.ok) {
-                      //   throw new Error('Network response was not ok');
-                      // }
-                      // return response.json();
-                    })
-                    .then(data => {
-                      // Show success message
-                      formStatus.classList.remove('hidden');
-                      successMessage.classList.remove('hidden');
-                      
-                      // Reset form
-                      form.reset();
-                    })
-                    .catch(error => {
-                      // Show error message
-                      formStatus.classList.remove('hidden');
-                      errorMessage.classList.remove('hidden');
-                      console.error('Error:', error);
-                    })
-                    .finally(() => {
-                      // Re-enable button
-                      submitButton.disabled = false;
-                      submitButton.innerHTML = 'Send Message';
-                      
-                      // Optional: Hide status message after 5 seconds
-                      setTimeout(() => {
-                        formStatus.classList.add('hidden');
-                      }, 5000);
-                    });
-                  });
-                </script>
-              </div>
-              <div class="space-y-8">
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <div class="space-y-4">
-                    <div class="flex items-center space-x-4">
-                      <div
-                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
-                      >
-                        <i class="ri-phone-line text-primary"></i>
-                      </div>
-                      <div>
-                        <p class="text-gray-600">0432062401</p>
-                        <p class="text-gray-600">0497623343</p>
-                      </div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                      <div
-                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
-                      >
-                        <i class="ri-mail-line text-primary"></i>
-                      </div>
-                      <p class="text-gray-600">info@nlivenhealthcare.com.au</p>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                      <div
-                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
-                      >
-                        <i class="ri-global-line text-primary"></i>
-                      </div>
-                      <p class="text-gray-600">www.nlivenhealthcare.com.au</p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-4">
-                    NDIS Registered Provider
-                  </h3>
-                  <p class="text-gray-600 mb-4">
-                    We are a registered NDIS provider committed to delivering
-                    high-quality care services.
-                  </p>
-                  
-                  <img src="./assets/ndis logo 2.png" alt="NDIS Badge" class="w-80" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-20 bg-white">
+      
+      <section id= "about"class="py-20 bg-white">
         <div class="container mx-auto px-6 lg:px-20">
           <div class="flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-1/2">
               <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                Nliven Health Care Pvt Ltd - Sunshine Coast 
+                Nliven Health Care Services - Sunshine Coast 
               </h2>
               <p class="text-gray-600 mb-6">
                 Approved provider for NDIS in-home and community supports for
@@ -379,6 +192,89 @@
           </div>
         </div>
       </section>
+
+
+      <section id="about" class="py-20 bg-gradient-to-r from-gray-50 to-white">
+        <div class="container mx-auto px-6 lg:px-20">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-semibold text-gray-800 mb-6 border-b-2 border-indigo-200 pb-2">
+                Nliven Health Care Services - Sunshine Coast
+              </h2>
+              <p class="text-gray-700 mb-8 leading-relaxed">
+                <span class="font-medium text-indigo-600">Approved provider</span> for NDIS in-home and community supports for adults.
+              </p>
+              <div class="mb-8">
+                <p class="text-gray-700 leading-relaxed">
+                  <span class="font-medium">Nliven Health Care</span> is a highly reliable and trustworthy NDIS Service Provider run by experienced RNs in the Sunshine Coast region, offering excellent support solutions to participants in need.
+                </p>
+              </div>
+              <div class="mb-8">
+                <p class="text-gray-700 leading-relaxed">
+                  We provide supported housing, transition accommodation, complex care services, and outreach support. Each service is unique and tailored to the individual needs of our participants.
+                </p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                Learn More
+                <svg class="-mr-1 ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center">
+              <div class="rounded-xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                <img
+                  src="./assets/ndis image 3.jpg"
+                  alt="Nliven Health Care Support"
+                  class="h-[32rem] aspect-square object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 bg-gradient-to-r from-green-50 to-white">
+        <div class="container mx-auto px-6 lg:px-20">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-semibold text-gray-800 mb-6 border-b-2 border-green-200 pb-2">
+                Nliven Health Care Services - Sunshine Coast
+              </h2>
+              <p class="text-gray-700 mb-8 leading-relaxed">
+                <span class="font-medium text-green-600">Approved provider</span> for NDIS in-home and community supports for adults.
+              </p>
+              <div class="mb-8">
+                <p class="text-gray-700 leading-relaxed">
+                  <span class="font-medium">Nliven Health Care</span> is a highly reliable and trustworthy NDIS Service Provider run by experienced RNs in the Sunshine Coast region, offering excellent support solutions to participants in need.
+                </p>
+              </div>
+              <div class="mb-8">
+                <p class="text-gray-700 leading-relaxed">
+                  We provide supported housing, transition accommodation, complex care services, and outreach support. Each service is unique and tailored to the individual needs of our participants.
+                </p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+                Learn More
+                <svg class="-mr-1 ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center">
+              <div class="rounded-xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-200 to-green-100 opacity-20 animate-pulse"></div>
+                <img
+                  src="./assets/ndis image 3.jpg"
+                  alt="Nliven Health Care Support"
+                  class="h-[32rem] aspect-square object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="py-20 bg-white">
         <div class="container mx-auto px-6 lg:px-20">
           <div class="flex flex-col md:flex-row-reverse items-center gap-12">
@@ -449,7 +345,7 @@
                 <div class="team-text-container bg-white p-8 rounded-lg shadow-lg flex-1">
                     <div class="text-gray-700">
                         <p class="mb-4">
-                           <h1 class="text-2xl font-bold">Nliven Health Care Pvt Ltd - Sunshine Coast </h1> is an approved provider for NDIS in-home and community supports for adults. We are a highly reliable and trustworthy NDIS Service Provider run by experienced RNs in the Sunshine Coast region, offering excellent support solutions to participants in need.
+                           <h1 class="text-2xl font-bold">Nliven Health Care Services - Sunshine Coast </h1> is an approved provider for NDIS in-home and community supports for adults. We are a highly reliable and trustworthy NDIS Service Provider run by experienced RNs in the Sunshine Coast region, offering excellent support solutions to participants in need.
                         </p>
                         <p class="mb-4">
                             We provide supported housing, transition accommodation, complex care services, and outreach support. Each service is unique and tailored to the individual needs of our participants.
@@ -681,10 +577,10 @@
       
 
 
-
+     
 
       <!-- Healthcare Services Section -->
-<section id="healthcare-services" class="py-20">
+<section id="services" class="py-20">
   <div class="container mx-auto md:px-20 px-5">
     <div class="container mx-auto px-4">
       <div class="text-center mb-10">
@@ -692,21 +588,29 @@
           Our Core Services
         </h2>        
       </div>
-    <div class="text-center mb-16">
-      <h2 class="md:text-4xl text-3xl font-semibold text-gray-900 mb-4">
-        Comprehensive Healthcare Services
-      </h2>
-      <p class="md:text-xl text-md text-gray-600 max-w-2xl mx-auto">
-        Personalized care solutions delivered by experienced healthcare professionals
-      </p>
+      
+     <!-- Divider -->
+     <div class="flex items-center justify-center mb-20">
+      <div class="h-px bg-gray-200 w-1/3"></div>
+      <div class="px-4">
+        <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
+           
+          <svg width="24" height="24" viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="20" fill="white" >1</text></svg>
+        </div>
+      </div>
+      <div class="h-px bg-gray-200 w-1/3"></div>
     </div>
+    
 
     <!-- Supported Independent Living -->
     <div class="py-20 bg-gray-50">
       <div class="container mx-auto px-5 md:px-10">
         
         
-        
+        <h3 class="text-2xl font-bold text-[#1e4a3f] mb-6">Supported Independent Living</h3>
+              <p class="text-gray-600 mb-8">
+                Our comprehensive package fosters autonomy alongside essential support.
+              </p>
         
         <!-- SIL Section - Staggered Cards with Center Image -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
@@ -747,8 +651,11 @@
           
           <!-- Center Image Column -->
           <div class="relative">
+
             <div class="sticky top-20">
+              
               <div class="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                
                 <img src="./assets/ryan-fields-Xz7MMD5tZwA-unsplash.jpg" alt="Supported Living" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#1e4a3f] to-transparent opacity-70"></div>
                 <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
@@ -808,7 +715,8 @@
           <div class="h-px bg-gray-200 w-1/3"></div>
           <div class="px-4">
             <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
-              <i class="ri-home-heart-line text-white text-xl"></i>
+              <!-- <i class="ri-home-heart-line text-white text-xl"></i> -->
+              <svg width="24" height="24" viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="20" fill="white" >2</text></svg>
             </div>
           </div>
           <div class="h-px bg-gray-200 w-1/3"></div>
@@ -909,7 +817,8 @@
       <div class="h-px bg-gray-200 w-1/3"></div>
       <div class="px-4">
         <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
-          <i class="ri-home-heart-line text-white text-xl"></i>
+
+          <svg width="24" height="24" viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="20" fill="white" >3</text></svg>
         </div>
       </div>
       <div class="h-px bg-gray-200 w-1/3"></div>
@@ -1013,7 +922,8 @@
       <div class="h-px bg-gray-200 w-1/3"></div>
       <div class="px-4">
         <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
-          <i class="ri-home-heart-line text-white text-xl"></i>
+          
+          <svg width="24" height="24" viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="20" fill="white" >4</text></svg>
         </div>
       </div>
       <div class="h-px bg-gray-200 w-1/3"></div>
@@ -1146,7 +1056,8 @@
       <div class="h-px bg-gray-200 w-1/3"></div>
       <div class="px-4">
         <div class="w-12 h-12 rounded-full bg-[#1e4a3f] flex items-center justify-center">
-          <i class="ri-home-heart-line text-white text-xl"></i>
+           
+          <svg width="24" height="24" viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="20" fill="white" >5</text></svg>
         </div>
       </div>
       <div class="h-px bg-gray-200 w-1/3"></div>
@@ -1278,8 +1189,196 @@
       </div>
     </div>
   </div>
+ 
+</section>
 
-  
+<section id="contact" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Reach out to us
+        </h2>
+        <p class="text-xl text-gray-600">
+          We're here to help. Contact us for more information about our
+          services.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <form id="contactForm" class="space-y-6">
+            <div>
+              <label class="block text-gray-700 mb-2" for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="mobile">Mobile</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                placeholder="Your Mobile"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-2 rounded-button border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              id="submitButton"
+              class="w-full bg-primary text-white px-6 py-3 rounded-button hover:bg-opacity-90 transition-all"
+            >
+              Send Message
+            </button>
+            <div id="formStatus" class="text-center hidden">
+              <p id="successMessage" class="text-green-600 font-medium hidden">Your message has been sent successfully!</p>
+              <p id="errorMessage" class="text-red-600 font-medium hidden">There was an error sending your message. Please try again.</p>
+            </div>
+          </form>
+          
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Change this URL to your actual Google Apps Script web app URL
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbzl589WrRrtVgCM2ayQCzuGmnTp0ikOMv3sSpnC7E41WZRTggq56NRCQjfk04lXPfBO/exec';
+              
+              // Get form elements
+              const form = this;
+              const submitButton = document.getElementById('submitButton');
+              const formStatus = document.getElementById('formStatus');
+              const successMessage = document.getElementById('successMessage');
+              const errorMessage = document.getElementById('errorMessage');
+              
+              // Disable button during submission
+              submitButton.disabled = true;
+              submitButton.innerHTML = 'Sending...';
+              
+              // Hide any previous status messages
+              formStatus.classList.add('hidden');
+              successMessage.classList.add('hidden');
+              errorMessage.classList.add('hidden');
+              
+              // Collect form data
+              const formData = new FormData(form);
+              
+              // Send data to Apps Script
+              fetch(scriptURL, {
+                method: 'POST',
+                body: formData,
+                 mode: 'no-cors'
+              })
+              .then(response => {
+                // if (!response.ok) {
+                //   throw new Error('Network response was not ok');
+                // }
+                // return response.json();
+              })
+              .then(data => {
+                // Show success message
+                formStatus.classList.remove('hidden');
+                successMessage.classList.remove('hidden');
+                
+                // Reset form
+                form.reset();
+              })
+              .catch(error => {
+                // Show error message
+                formStatus.classList.remove('hidden');
+                errorMessage.classList.remove('hidden');
+                console.error('Error:', error);
+              })
+              .finally(() => {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+                
+                // Optional: Hide status message after 5 seconds
+                setTimeout(() => {
+                  formStatus.classList.add('hidden');
+                }, 5000);
+              });
+            });
+          </script>
+        </div>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Contact Information
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-gray-600">0432062401</p>
+                  <p class="text-gray-600">0497623343</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <p class="text-gray-600">info@nlivenhealthcare.com.au</p>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-global-line text-primary"></i>
+                </div>
+                <p class="text-gray-600">www.nlivenhealthcare.com.au</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              NDIS Registered Provider
+            </h3>
+            <p class="text-gray-600 mb-4">
+              We are a registered NDIS provider committed to delivering
+              high-quality care services.
+            </p>
+            
+            <img src="./assets/ndis logo 2.png" alt="NDIS Badge" class="w-80" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
     </main>
     <footer class="bg-gray-900 text-white md:py-12 py-6">
