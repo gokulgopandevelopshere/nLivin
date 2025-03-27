@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nLiven Healthcare Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/tailwind.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./style.css" />
@@ -1405,17 +1406,18 @@
         <div
           class="border-t border-[#008d57] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-        
         <p>ABN: 91661653167 </p>
+        <div>
+          
+        
+          <a href="your-facebook-link-here" class="inline-block">
+            <i class="ri-facebook-fill text-white bg-[#008d57] hover:bg-[#006d43] rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"></i>
+          </a>        </div>
+        
           <p class="text-gray-400 text-center md:text-left flex gap-3 items-center">
             © 2025 nLiven Healthcare. All rights reserved.
             
-            <a
-            href="#"
-            class="w-10 h-10 bg-[#008d57] rounded-full flex items-center justify-center hover:bg-[#006d43] transition-colors"
-          >
           
-            <i class="ri-facebook-fill text-white"></i>
           </a>
           </p>
         </div>
@@ -1428,35 +1430,7 @@
       <i class="ri-arrow-up-line text-xl"></i>
     </button>
         <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#1e4a3f',
-                        'secondary': '#3ab795',
-                        'light-primary': '#2c6e5a',
-                    },
-                    keyframes: {
-                        popIn: {
-                            'to': { opacity: '1', transform: 'scale(1)' },
-                        },
-                        float: {
-                            '0%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-100px)' },
-                        },
-                        fadeInDown: {
-                            'from': { opacity: '0', transform: 'translateY(20px)' },
-                            'to': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    },
-                    animation: {
-                        'pop-in': 'popIn 0.6s forwards',
-                        'float': 'float 5s normal',
-                        'fade-in-down': 'fadeInDown 1s forwards 0.5s',
-                    }
-                }
-            }
-        }
+        
 
         document.addEventListener('DOMContentLoaded', () => {
             const section = document.getElementById('services-section');
